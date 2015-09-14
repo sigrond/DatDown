@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1442234289 source:d:\moje dokumenty\datdown\datadownloader.cpp
+	<iostream>
+	<curl/curl.h>
+	<fstream>
+

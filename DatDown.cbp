@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="DatDown" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="DatDown" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../../Program Files/CodeBlocks/DevPaks/include" />
+		</Compiler>
+		<Linker>
+			<Add library="..\..\Program Files\CodeBlocks\DevPaks\lib\libcurldll.a" />
+			<Add directory="../../Program Files/CodeBlocks/DevPaks/lib" />
+		</Linker>
+		<Unit filename="DATAdownloader.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
