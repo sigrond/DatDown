@@ -53,7 +53,8 @@ int main(int argc, char* argv[])
 	num=buffer.find(">EPWA");
 	if(num==string::npos)
 	return 0;
-	//cout<<buffer[num+5]<<"+"<<(int)buffer[num+5]<<endl;
+	if(debug)
+	cout<<buffer[num+5]<<"+"<<(int)buffer[num+5]<<endl;
 	int li=0;
 	while(true)
 	{
@@ -63,18 +64,24 @@ int main(int argc, char* argv[])
 		if(li==6)
 		break;
 	}
-	//cout<<buffer[num+1]<<endl;
+	if(debug)
+	cout<<buffer[num+1]<<endl;
 	num++;
 	string st="";
 	fstream f;
 	f.open("cisnienie.txt", ios::out);
 	while((int)buffer[num+1]>46 && (int)buffer[num+1]<58)
 	{
+	    if(debug)
+            cout<<(int)buffer[num+1]<<" "<<buffer[num+1]<<endl;
 		num++;
 		st+=buffer[num];
 	}
+	if(debug)
+        cout<<st<<endl;
 	f<<st;
 	f.close();
+	cout<<"file saved"<<endl;
 
 	//system("pause");
 	return 0;
