@@ -15,8 +15,18 @@ static int writer(char *data, size_t size, size_t nmemb,std::string *buffer)
   }
   return result;
 }
-int main()
+int main(int argc, char* argv[])
 {
+    bool debug=false;
+    string arg;
+    for(int i=0; i<argc; i++)
+    {
+        arg=argv[i];
+        if(arg=="-debug")
+        {
+            debug=true;
+        }
+    }
 	CURL *curl;
 	CURLcode res;
 	curl=curl_easy_init();
@@ -33,6 +43,10 @@ int main()
 	res=curl_easy_perform(curl);
 	curl_easy_cleanup(curl);
 	cout<<"download done!"<<endl;
+	if(debug)
+    {
+        cout<<buffer<<endl;
+    }
 
 
 	size_t num;
