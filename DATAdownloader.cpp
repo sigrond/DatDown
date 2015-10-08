@@ -60,9 +60,11 @@ int main(int argc, char* argv[])
 	{
 		num++;//32space
 		if((int)buffer[num]==32)//6q
-		li++;
-		if(li==6)
-		break;
+		{
+		    li++;
+            if(buffer[num+1]=='Q' && li>3)
+            break;
+		}
 	}
 	if(debug)
 	cout<<buffer[num+1]<<endl;
